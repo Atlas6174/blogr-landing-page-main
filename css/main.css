@@ -346,6 +346,7 @@ body {
     transition: none;
   }
   .dropdown-item_link {
+    font-size: 1rem;
     align-self: baseline;
     padding: 0.5rem 0;
   }
