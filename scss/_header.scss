@@ -1,0 +1,226 @@
+body {
+  //position:relative;
+  background: $l_red;
+}
+
+
+/**********************************************
+ ***** HEADER (LOGO, BRG_BTN AND NAVBAR)) *****
+ **********************************************/
+
+/* Logo and burger button */
+.header-wrapper {
+  position: fixed;
+  top: 3.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 $s_space;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+
+  @include typ('Overpass', $small, 600, $v_d_g_blue);
+
+  .flex-container {
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo, .menu-btn {
+      height: 100%;
+    }
+  }
+}
+
+.menu-btn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &_brg {
+    position: relative;
+    width: 2rem;
+    height: .125rem;
+    background: $white;
+    
+    @include transition;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      width: 2rem;
+      height: .125rem;
+      background: $white;
+
+      @include transition;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      width: 2rem;
+      height: .125rem;
+      background: $white;
+
+      @include transition;
+    }
+  }
+
+  .open {
+    transform: rotate(720deg);
+    background: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/* Navigation bar structure */
+
+.nav {
+  max-height: calc(100% - 12rem);
+  border-radius: .25rem;
+  margin-top: 2.25rem;
+  padding: $s_space;
+  background: $white;
+
+  overflow-y: scroll;
+
+  .menu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      width: 100%;
+      cursor: pointer;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      &_link {
+	padding: $s_space 0;
+
+	img {
+	  margin-left: .25rem;
+
+	  @include transition;
+	}
+
+	.white-arrow {
+	  display: none;
+	}
+      }
+    }
+  }
+
+  .nav-division {
+    color: $g_white;
+    margin-top: $s_space;
+    margin-bottom: .25rem;
+  }
+
+  .cta {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 .25rem .25rem ;
+
+    &-login {
+      margin: .25rem 0;
+    }
+
+    &-sign_up {
+      margin: .25rem 0 ;
+      background: gradient(intro, 90deg);
+      @include typ('Ubuntu', inherit, 500, $white);
+
+      &:hover, &:active {
+	@include active-btn($white, $l_red);
+	border: 1px solid $l_red;
+      }
+    }
+  }
+}
+
+/* Dropdown structure */
+.dropdown {
+  display: flex;
+  border-radius: .25rem;
+  width: 100%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background: $g_white;
+
+  font-size: 1rem;
+  overflow: hidden;
+
+&-item {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &_link {
+      padding: 1rem 0;
+
+      &:hover, &:active {
+	font-size: 1.190rem;
+	color: $v_d_b_blue;
+      }
+    }
+  }
+}
+
+/* Mechanics for the navigation bar */
+.nav {
+  transform: translateX(calc(100% + 2rem));
+
+  @include transition;
+
+  &.open {
+    transform: translateX(0);
+
+    @include transition;
+  }
+}
+
+/* Mechanics for the dropdown */
+.dropdown {
+  max-height: 0rem;
+  padding: 0;
+  color: none;
+
+  @include transition;
+
+  &.open {
+    max-height: 18rem;
+    padding: 1rem;
+    color: $v_d_g_blue;
+    
+    @include transition;
+  }
+}
+
+.menu-item_link.open img {
+  transform: rotate(180deg);
+}

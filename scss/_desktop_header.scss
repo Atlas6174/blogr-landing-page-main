@@ -1,0 +1,122 @@
+@media(min-width: 800px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    display: inline-flex;
+    max-width: 69.875rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    
+    @include typ('Ubuntu', 1rem, 500, $white);
+
+    .flex-container {
+      display: inline;
+      width: auto;
+      height: 100%;
+
+      .logo {
+	height: 100%;
+      }
+    }
+  }
+
+  .nav {
+    display: inline-flex;
+    width: 100%;
+    max-height: none;
+    height: 2.5rem;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background: none;
+    overflow: initial;
+
+    transform: translateX(0);
+
+    .menu {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      margin-left: 4rem;
+      width: 19.25rem;
+      height: 2.5rem;
+
+      &-item {
+	position: relative;
+	display: block;
+
+	&_link:hover {
+	  text-decoration: underline;
+	}
+
+	.red-arrow {
+	  display: none;
+	}
+	.white-arrow {
+	  display: initial;
+	}
+      }
+    }
+
+    &-division {
+      display: none;
+    }
+
+    .cta {
+      display: inline-flex;
+      width: auto;
+      padding: 0;
+      flex-flow: row nowrap;
+
+      &-login {
+	width: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+
+	&:hover, &:active {
+	  text-decoration: underline;
+	  font-weight: 700;
+	}
+      }
+
+      &-sign_up {
+	background: $white;
+	font-weight: 700;
+	color: $l_red;
+
+	&:hover, &:active {
+	  @include active-btn($v_l_red, $white);
+	}
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 1.75rem;
+    left: -1.5rem;
+    width: 10.5rem;
+    transition: none;
+
+    &-item_link {
+      align-self: baseline;
+      padding: 0.5rem 0;
+    }
+
+    &.open {
+      padding: 1.125rem 1.5rem;
+      transition: none;
+    }
+  }
+}
+
+/* Auxiliar */
+.intro {
+  padding-top: 15rem;
+}

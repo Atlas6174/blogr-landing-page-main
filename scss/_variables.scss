@@ -1,0 +1,65 @@
+/*******************
+ ****** COLORS *****
+ *******************/
+
+/* Primary */
+$l_red: hsl(356, 100%, 66%);
+$v_l_red: hsl(355, 100%, 74%);
+$v_d_blue: hsl(208, 49%, 24%);
+
+/* Neutral */
+$white: hsl(0, 0%, 100%);
+$g_blue: hsl(240, 2%, 79%);
+$v_d_g_blue: hsl(207, 13%, 34%);
+$v_d_b_blue: hsl(240, 10%, 16%);
+$g_white: #efeff1;  // For the background of the mobile navbar
+
+/* Gradients */
+@function gradient($place, $deg) {
+  @if $place == intro {
+    @return linear-gradient($deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  } @else if $place == body {
+    @return linear-gradient($deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%))
+  }
+}
+
+
+
+/**********************
+ ***** TYPOGRAPHY *****
+ **********************/
+
+/* Font sizea */
+$small: 1.175rem;
+
+/*Overpass: 300, 600| Ubuntu: 400, 500, 700*/
+@mixin typ($family, $size, $weight, $color) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+
+
+/*********************
+ ***** STRUCTURE *****
+ *********************/
+$s_space: 1.5rem;
+
+
+
+/**********************
+ ***** ANIMATIONS *****
+ **********************/
+@mixin transition() {
+  transition: all 0.75s ease-in-out;
+}
+
+/*************************
+ ***** COMMON STYLES *****
+ *************************/
+@mixin active-btn($bg, $clr) {
+  background: $bg;
+  color: $clr;
+}

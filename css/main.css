@@ -1,0 +1,367 @@
+/*******************
+ ****** COLORS *****
+ *******************/
+/* Primary */
+/* Neutral */
+/* Gradients */
+/**********************
+ ***** TYPOGRAPHY *****
+ **********************/
+/* Font sizea */
+/*Overpass: 300, 600| Ubuntu: 400, 500, 700*/
+/*********************
+ ***** STRUCTURE *****
+ *********************/
+/**********************
+ ***** ANIMATIONS *****
+ **********************/
+/*************************
+ ***** COMMON STYLES *****
+ *************************/
+/******************
+ ***** RESETS *****
+ ******************/
+html, body {
+  font-size: 16px;
+}
+
+html, body, header, main,
+h1, h2, h3, h4, h5, h6, hr,
+ol, ul, li, a, div, span, p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li, ol, ul, a {
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*************************
+ ***** COMMON STYLES *****
+ *************************/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.635rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.75s ease-in-out;
+}
+
+body {
+  background: #ff525d;
+}
+
+/**********************************************
+ ***** HEADER (LOGO, BRG_BTN AND NAVBAR)) *****
+ **********************************************/
+/* Logo and burger button */
+.header-wrapper {
+  position: fixed;
+  top: 3.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.175rem;
+  font-weight: 600;
+  color: #4b5862;
+}
+.header .flex-container {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .flex-container .logo, .header .flex-container .menu-btn {
+  height: 100%;
+}
+
+.menu-btn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.menu-btn_brg {
+  position: relative;
+  width: 2rem;
+  height: 0.125rem;
+  background: white;
+  transition: all 0.75s ease-in-out;
+}
+.menu-btn_brg::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 2rem;
+  height: 0.125rem;
+  background: white;
+  transition: all 0.75s ease-in-out;
+}
+.menu-btn_brg::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 2rem;
+  height: 0.125rem;
+  background: white;
+  transition: all 0.75s ease-in-out;
+}
+.menu-btn .open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn .open::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.menu-btn .open::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+/* Navigation bar structure */
+.nav {
+  max-height: calc(100% - 12rem);
+  border-radius: 0.25rem;
+  margin-top: 2.25rem;
+  padding: 1.5rem;
+  background: white;
+  overflow-y: scroll;
+}
+.nav .menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav .menu-item {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav .menu-item_link {
+  padding: 1.5rem 0;
+}
+.nav .menu-item_link img {
+  margin-left: 0.25rem;
+  transition: all 0.75s ease-in-out;
+}
+.nav .menu-item_link .white-arrow {
+  display: none;
+}
+.nav .nav-division {
+  color: #efeff1;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.nav .cta {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.25rem 0.25rem;
+}
+.nav .cta-login {
+  margin: 0.25rem 0;
+}
+.nav .cta-sign_up {
+  margin: 0.25rem 0;
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  font-family: "Ubuntu", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  color: white;
+}
+.nav .cta-sign_up:hover, .nav .cta-sign_up:active {
+  background: white;
+  color: #ff525d;
+  border: 1px solid #ff525d;
+}
+
+/* Dropdown structure */
+.dropdown {
+  display: flex;
+  border-radius: 0.25rem;
+  width: 100%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background: #efeff1;
+  font-size: 1rem;
+  overflow: hidden;
+}
+.dropdown-item {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.dropdown-item_link {
+  padding: 1rem 0;
+}
+.dropdown-item_link:hover, .dropdown-item_link:active {
+  font-size: 1.19rem;
+  color: #25252d;
+}
+
+/* Mechanics for the navigation bar */
+.nav {
+  transform: translateX(calc(100% + 2rem));
+  transition: all 0.75s ease-in-out;
+}
+.nav.open {
+  transform: translateX(0);
+  transition: all 0.75s ease-in-out;
+}
+
+/* Mechanics for the dropdown */
+.dropdown {
+  max-height: 0rem;
+  padding: 0;
+  color: none;
+  transition: all 0.75s ease-in-out;
+}
+.dropdown.open {
+  max-height: 18rem;
+  padding: 1rem;
+  color: #4b5862;
+  transition: all 0.75s ease-in-out;
+}
+
+.menu-item_link.open img {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 800px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    display: inline-flex;
+    max-width: 69.875rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+  }
+  .header .flex-container {
+    display: inline;
+    width: auto;
+    height: 100%;
+  }
+  .header .flex-container .logo {
+    height: 100%;
+  }
+
+  .nav {
+    display: inline-flex;
+    width: 100%;
+    max-height: none;
+    height: 2.5rem;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background: none;
+    overflow: initial;
+    transform: translateX(0);
+  }
+  .nav .menu {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin-left: 4rem;
+    width: 19.25rem;
+    height: 2.5rem;
+  }
+  .nav .menu-item {
+    position: relative;
+    display: block;
+  }
+  .nav .menu-item_link:hover {
+    text-decoration: underline;
+  }
+  .nav .menu-item .red-arrow {
+    display: none;
+  }
+  .nav .menu-item .white-arrow {
+    display: initial;
+  }
+  .nav-division {
+    display: none;
+  }
+  .nav .cta {
+    display: inline-flex;
+    width: auto;
+    padding: 0;
+    flex-flow: row nowrap;
+  }
+  .nav .cta-login {
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .nav .cta-login:hover, .nav .cta-login:active {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  .nav .cta-sign_up {
+    background: white;
+    font-weight: 700;
+    color: #ff525d;
+  }
+  .nav .cta-sign_up:hover, .nav .cta-sign_up:active {
+    background: #ff7a85;
+    color: white;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 1.75rem;
+    left: -1.5rem;
+    width: 10.5rem;
+    transition: none;
+  }
+  .dropdown-item_link {
+    align-self: baseline;
+    padding: 0.5rem 0;
+  }
+  .dropdown.open {
+    padding: 1.125rem 1.5rem;
+    transition: none;
+  }
+}
+/* Auxiliar */
+.intro {
+  padding-top: 15rem;
+}
+
+/*
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*/
+
+/*# sourceMappingURL=main.css.map */
