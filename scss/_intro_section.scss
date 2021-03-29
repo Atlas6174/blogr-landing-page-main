@@ -1,0 +1,76 @@
+.intro {
+  position: relative;
+  border-bottom-left-radius: 5.875rem;
+  padding-top: 10rem;
+  background-image: url(../images/bg-pattern-intro.svg);
+  background-repeat: no-repeat;
+  background-size: 350%;
+  background-position: 35% 40%;
+
+  @include typ('Overpass', 1rem, 400, $white);
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 5.875rem;
+    background: gradient(intro, 0);
+  }
+
+  &-title {
+    margin-bottom: $s_space;
+
+    font-size: 2.225rem;
+    font-weight: 600;
+    line-height: 2.75rem;
+    text-align: center;
+  }
+
+  &-info {
+    margin-bottom: $s_space * 2;
+
+    font-size:  $small;
+    font-weight: 300;
+    line-height: 1.45rem;
+    text-align: center;
+  }
+
+  &-cta {
+    display: flex;
+    max-width: 20.5rem;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 9.6875rem;
+    margin: 0 auto;
+
+    font-size: $small;
+
+    &-start {
+      background: $white;
+
+      @include typ('Ubuntu', 1rem, 700, $l_red);
+      @include transition;
+
+      &:hover, &:active {
+	@include active-btn($v_l_red, $white);
+	@include transition;
+      }
+    }
+
+    &-learn {
+      border: 1px solid $white;
+
+      @include typ('Ubuntu', 1rem, 700, $white);
+
+      &:hover, &:active {
+	@include active-btn($white, $v_l_red);
+	@include transition;
+      }
+    }
+  }
+}

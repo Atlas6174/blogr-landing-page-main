@@ -42,6 +42,16 @@ li, ol, ul, a {
 /*************************
  ***** COMMON STYLES *****
  *************************/
+.container {
+  margin: 0 1.5rem;
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 69.875rem;
+    padding: 0;
+  }
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -53,25 +63,22 @@ li, ol, ul, a {
   transition: all 0.75s ease-in-out;
 }
 
-body {
-  background: #ff525d;
-}
-
 /**********************************************
  ***** HEADER (LOGO, BRG_BTN AND NAVBAR)) *****
  **********************************************/
 /* Logo and burger button */
 .header-wrapper {
   position: fixed;
+  z-index: 999;
   top: 3.5rem;
   width: 100%;
-  height: 100%;
+  height: 2rem;
   padding: 0 1.5rem;
 }
 
 .header {
   width: 100%;
-  height: 100%;
+  height: 2rem;
   font-family: "Overpass", sans-serif;
   font-size: 1.175rem;
   font-weight: 600;
@@ -133,7 +140,7 @@ body {
 
 /* Navigation bar structure */
 .nav {
-  max-height: calc(100% - 12rem);
+  max-height: calc(100vh - 12rem);
   border-radius: 0.25rem;
   margin-top: 2.25rem;
   padding: 1.5rem;
@@ -181,7 +188,7 @@ body {
 }
 .nav .cta-sign_up {
   margin: 0.25rem 0;
-  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  background: linear-gradient(90deg, #ff3d54, #ff8f70);
   font-family: "Ubuntu", sans-serif;
   font-size: inherit;
   font-weight: 500;
@@ -256,6 +263,7 @@ body {
 
   .header-wrapper {
     display: flex;
+    height: 2.5rem;
     justify-content: center;
   }
 
@@ -346,7 +354,6 @@ body {
     transition: none;
   }
   .dropdown-item_link {
-    font-size: 1rem;
     align-self: baseline;
     padding: 0.5rem 0;
   }
@@ -360,6 +367,90 @@ body {
   padding-top: 15rem;
 }
 
+.intro {
+  position: relative;
+  border-bottom-left-radius: 5.875rem;
+  padding-top: 10rem;
+  background-image: url(../images/bg-pattern-intro.svg);
+  background-repeat: no-repeat;
+  background-size: 350%;
+  background-position: 35% 40%;
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+.intro::before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 5.875rem;
+  background: linear-gradient(0, #ff3d54, #ff8f70);
+}
+.intro-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.225rem;
+  font-weight: 600;
+  line-height: 2.75rem;
+  text-align: center;
+}
+.intro-info {
+  margin-bottom: 3rem;
+  font-size: 1.175rem;
+  font-weight: 300;
+  line-height: 1.45rem;
+  text-align: center;
+}
+.intro-cta {
+  display: flex;
+  max-width: 20.5rem;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 9.6875rem;
+  margin: 0 auto;
+  font-size: 1.175rem;
+}
+.intro-cta-start {
+  background: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff525d;
+  transition: all 0.75s ease-in-out;
+}
+.intro-cta-start:hover, .intro-cta-start:active {
+  background: #ff7a85;
+  color: white;
+  transition: all 0.75s ease-in-out;
+}
+.intro-cta-learn {
+  border: 1px solid white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+.intro-cta-learn:hover, .intro-cta-learn:active {
+  background: white;
+  color: #ff7a85;
+  transition: all 0.75s ease-in-out;
+}
+
+@media (min-width: 800px) {
+  .intro {
+    padding-top: 14.625rem;
+    background-size: 245%;
+    background-position: 27% 51%;
+  }
+  .intro-title {
+    font-size: 3.65rem;
+  }
+}
 /*
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

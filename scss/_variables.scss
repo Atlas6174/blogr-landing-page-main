@@ -17,7 +17,7 @@ $g_white: #efeff1;  // For the background of the mobile navbar
 /* Gradients */
 @function gradient($place, $deg) {
   @if $place == intro {
-    @return linear-gradient($deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    @return linear-gradient($deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
   } @else if $place == body {
     @return linear-gradient($deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%))
   }

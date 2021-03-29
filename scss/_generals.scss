@@ -24,6 +24,15 @@ li, ol, ul, a {
 /*************************
  ***** COMMON STYLES *****
  *************************/
+.container {
+  margin: 0 $s_space;
+
+  @media(max-width: 800px) {
+    max-width: 69.875rem;
+    padding: 0;
+  }
+}
+
 .btn {
   display: flex;
   justify-content: center;
