@@ -21,7 +21,7 @@
 /******************
  ***** RESETS *****
  ******************/
-html, body {
+html, body, footer {
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -642,9 +642,81 @@ li, ol, ul, a {
   }
 }
 
-/*
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-*/
+footer {
+  border-top-right-radius: 5.875rem;
+  background: #25252d;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: calc(100% - 2rem);
+  max-width: 69.875rem;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  padding-top: 4.625rem;
+  padding-bottom: 1.5rem;
+}
+.footer-wrapper .foot-section {
+  flex: 1;
+}
+.footer-wrapper .foot-section .img-wrapper {
+  height: 2.5rem;
+  margin-bottom: 5.125rem;
+}
+.footer-wrapper .foot-section .img-wrapper .logo {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+.footer-wrapper .foot-section-title {
+  margin-bottom: 2.25rem;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+}
+.footer-wrapper .foot-section-list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 3.375rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #c8c8cb;
+}
+.footer-wrapper .foot-section-list .list-item {
+  width: max-content;
+  margin-bottom: 1rem;
+}
+.footer-wrapper .foot-section-list .list-item_link:hover, .footer-wrapper .foot-section-list .list-item_link:active {
+  text-decoration: underline;
+}
+@media (min-width: 800px) {
+  .footer-wrapper {
+    flex-flow: row nowrap;
+  }
+  .footer-wrapper .foot-section .img-wrapper .logo {
+    margin: 0;
+  }
+  .footer-wrapper .foot-section-title {
+    text-align: left;
+  }
+  .footer-wrapper .foot-section-list {
+    display: block;
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
 
 /*# sourceMappingURL=main.css.map */

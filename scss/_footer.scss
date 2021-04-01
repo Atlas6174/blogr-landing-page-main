@@ -1,0 +1,73 @@
+footer {
+  border-top-right-radius: 5.875rem;
+  background: $v_d_b_blue;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: calc(100% - 2rem);
+  max-width: 69.875rem;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  padding-top: 4.625rem;
+  padding-bottom: 1.5rem;
+
+  .foot-section {
+    flex: 1;
+
+    .img-wrapper {
+      height: 2.5rem;
+      margin-bottom: 5.125rem;
+
+      .logo {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+      }
+    }
+    
+    &-title {
+      margin-bottom: 2.25rem;
+      text-align: center;
+      @include typ('Ubuntu', .95rem, 500, $white);
+    }
+
+    &-list {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      padding-bottom: 3.375rem;
+      @include typ('Ubuntu', .95rem, 500, $g_blue);
+
+      .list-item {
+	width: max-content;
+	margin-bottom: 1rem;
+
+	&_link:hover, &_link:active {
+	  text-decoration: underline;
+	}
+      }
+    }
+  }
+
+  @media(min-width: 800px) {
+    flex-flow: row nowrap;
+    
+    .foot-section {
+
+      .img-wrapper {
+	.logo {
+	  margin: 0;
+	}
+      }
+
+      &-title {
+	text-align: left;
+      }
+
+      &-list {
+	display: block;
+      }
+    }
+  }
+}

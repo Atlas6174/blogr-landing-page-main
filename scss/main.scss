@@ -5,10 +5,18 @@
 @import 'intro_section';
 @import 'desktop_intro_section';
 @import 'sections';
+@import 'footer';
 
 
-/*
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-*/
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
 
