@@ -4,6 +4,12 @@
 
 html, body {
   font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
 }
 
 html , body, header, main, 
@@ -27,8 +33,10 @@ li, ol, ul, a {
 .container {
   margin: 0 $s_space;
 
-  @media(max-width: 800px) {
+  @media(min-width: 800px) {
+    width: calc(100% - 2rem);
     max-width: 69.875rem;
+    margin: 0 auto;
     padding: 0;
   }
 }
@@ -43,3 +51,5 @@ li, ol, ul, a {
   cursor: pointer;
   @include transition;
 }
+
+

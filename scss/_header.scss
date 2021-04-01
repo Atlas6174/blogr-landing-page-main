@@ -10,6 +10,15 @@
   width: 100%;
   height: 2rem;
   padding: 0 $s_space;
+
+  @include transition;
+
+  &.scrolled {
+    top: 0;
+    height: 3rem;
+    padding: .5rem $s_space;
+    background: $l_red;
+  }
 }
 
 .header {

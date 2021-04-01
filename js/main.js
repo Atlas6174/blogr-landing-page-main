@@ -3,6 +3,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const menuBtnBrg = document.querySelector(".menu-btn_brg");
 const nav = document.querySelector('.nav');
 const menuItem = document.querySelectorAll(".menu-item");
+const headerWrapper = document.querySelector(".header-wrapper")
 
 const closeDrops = function() {
   menuItem.forEach(item => {
@@ -63,3 +64,16 @@ function drop() {
     this.droped = false;
   }
 }
+
+// change the background color from the header after first scroll
+document.addEventListener('scroll', changeBg);
+
+function changeBg() {
+  if (pageYOffset > 30) {
+    headerWrapper.classList.add("scrolled");
+  } else {
+    headerWrapper.classList.remove("scrolled");
+  }
+}
+
+changeBg();
