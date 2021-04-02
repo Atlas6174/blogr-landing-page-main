@@ -4,6 +4,9 @@
     background-size: 245%;
     background-position: 27% 51%;
 
+    &::before {
+      background: gradient(intro, -90deg);
+    }
 
     &-title {
       font-size: 3.65rem;

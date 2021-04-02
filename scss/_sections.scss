@@ -54,6 +54,7 @@
   }
 }
 
+// First section mobile
 #first-section {
   padding-top: 6.625rem;
   padding-bottom: 13.75rem;
@@ -61,8 +62,11 @@
   .section-title {
     margin-bottom: 3rem;
   }
+}
 
-  @media(min-width: 800px) {
+// First section desktop
+@media(min-width: 800px) {
+  #first-section {
     padding-top: 10rem;
     background-image: url(../images/illustration-editor-desktop.svg);
     background-repeat: no-repeat;
@@ -86,6 +90,7 @@
   }
 }
 
+// Second section mobile
 #second-section {
   position: relative;
   border-bottom-left-radius: 5.875rem;
@@ -108,7 +113,7 @@
     width: 100%;
     border-bottom-left-radius: 5.875rem;
     border-top-right-radius: 5.875rem;
-    background: $v_d_blue;
+    background: gradient(body, 180deg);
   }
 
   .img-wrapper {
@@ -134,11 +139,18 @@
       color: $white;
     }
   }
+}
 
-  @media(min-width: 800px) {
+// Secont section desktop
+@media(min-width: 800px) {
+  #second-section {
     padding-top: 7.625rem;
     background-position: calc(50% - 26.5rem) calc(50% - 13.25rem);
     background-size: 70%;
+
+    &::before {
+      background: gradient(body, 90deg);
+    }
 
     .img-wrapper {
       flex: 1;
@@ -160,6 +172,7 @@
   }
 }
 
+// Third sectin mobile
 #third-section {
   padding-top: 5rem;
   padding-bottom: 3rem;
@@ -177,8 +190,11 @@
       margin: 0 auto;
     }
   }
+}
 
-  @media(min-width: 800px) {
+// Third section desktop
+@media(min-width: 800px) {
+  #third-section {
     padding-top: 19.25rem;
     padding-bottom: 19.25rem;
     background-image: url(../images/illustration-laptop-desktop.svg);

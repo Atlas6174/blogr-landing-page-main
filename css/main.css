@@ -466,6 +466,9 @@ li, ol, ul, a {
     background-size: 245%;
     background-position: 27% 51%;
   }
+  .intro::before {
+    background: linear-gradient(-90deg, #ff3d54, #ff8f70);
+  }
   .intro-title {
     font-size: 3.65rem;
   }
@@ -524,6 +527,7 @@ li, ol, ul, a {
 #first-section .section-title {
   margin-bottom: 3rem;
 }
+
 @media (min-width: 800px) {
   #first-section {
     padding-top: 10rem;
@@ -543,7 +547,6 @@ li, ol, ul, a {
     text-align: left;
   }
 }
-
 #second-section {
   position: relative;
   border-bottom-left-radius: 5.875rem;
@@ -566,7 +569,7 @@ li, ol, ul, a {
   width: 100%;
   border-bottom-left-radius: 5.875rem;
   border-top-right-radius: 5.875rem;
-  background: #1f3f5b;
+  background: linear-gradient(180deg, #2c2d3f, #3f4164);
 }
 #second-section .img-wrapper {
   position: relative;
@@ -586,11 +589,15 @@ li, ol, ul, a {
 #second-section .content-text {
   color: white;
 }
+
 @media (min-width: 800px) {
   #second-section {
     padding-top: 7.625rem;
     background-position: calc(50% - 26.5rem) calc(50% - 13.25rem);
     background-size: 70%;
+  }
+  #second-section::before {
+    background: linear-gradient(90deg, #2c2d3f, #3f4164);
   }
   #second-section .img-wrapper {
     flex: 1;
@@ -607,7 +614,6 @@ li, ol, ul, a {
     text-align: left;
   }
 }
-
 #third-section {
   padding-top: 5rem;
   padding-bottom: 3rem;
@@ -621,6 +627,7 @@ li, ol, ul, a {
   width: 20.5rem;
   margin: 0 auto;
 }
+
 @media (min-width: 800px) {
   #third-section {
     padding-top: 19.25rem;
@@ -641,7 +648,6 @@ li, ol, ul, a {
     text-align: left;
   }
 }
-
 footer {
   border-top-right-radius: 5.875rem;
   background: #25252d;
