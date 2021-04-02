@@ -33,7 +33,7 @@ body {
 
 html, body, header, main,
 h1, h2, h3, h4, h5, h6, hr,
-ol, ul, li, a, div, span, p {
+ol, ul, li, a, div, span, p, button {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -170,17 +170,18 @@ li, ol, ul, a {
 }
 .nav .menu-item {
   display: flex;
-  width: 100%;
   cursor: pointer;
+  width: 100%;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
 }
 .nav .menu-item_link {
+  display: inline;
   padding: 1.5rem 0;
+  font-size: 1.175rem;
 }
 .nav .menu-item_link img {
-  margin-left: 0.25rem;
   transition: all 0.75s ease-in-out;
 }
 .nav .menu-item_link .white-arrow {
@@ -638,7 +639,7 @@ li, ol, ul, a {
     background-position: -65% 35%;
   }
   #third-section .section-body {
-    justify-content: right;
+    justify-content: flex-end;
   }
   #third-section .section-body .content {
     flex: 0.5;
@@ -715,7 +716,7 @@ footer {
 }
 
 .attribution {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   font-size: 11px;

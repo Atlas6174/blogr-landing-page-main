@@ -57,9 +57,9 @@ future.
 
 ### Continued development
 
-The header has an issue. If you open or close a dropdown, the page will give you at the
-start from the page; that's occurs cause the items from the navbar are links, and even
-the href is empty, the page scroll to the top. Thats something to fix.
+Currently, the behvior from the navbar is an click event (both mobile and desktop) but
+in desktop, may be useful make it a hover event too. The issue is that if the user click
+a dropdown and hover other, the dropdowns will overlap.
 
 I would be very grateful for some feedback related to the page in general, but specialy
 related to the navbar and header development and the organization from the whole scss.

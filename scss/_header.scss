@@ -111,18 +111,18 @@
 
     &-item {
       display: flex;
-      width: 100%;
       cursor: pointer;
+      width: 100%;
       flex-flow: column wrap;
       justify-content: space-around;
       align-items: center;
 
       &_link {
+	display: inline;
 	padding: $s_space 0;
+	font-size: 1.175rem;
 
 	img {
-	  margin-left: .25rem;
-
 	  @include transition;
 	}
 
@@ -177,7 +177,7 @@
   font-size: 1rem;
   overflow: hidden;
 
-&-item {
+  &-item {
     display: flex;
     width: 100%;
     flex-flow: column wrap;
