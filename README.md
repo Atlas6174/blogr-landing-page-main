@@ -1,6 +1,6 @@
 # Frontend Mentor - Blogr landing page solution
 
-This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP).
 
 ## Table of contents
 
@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://atlas6174.github.io/blogr-landing-page-main/)
+- Solution URL: [Solution in GithubPages](https://atlas6174.github.io/blogr-landing-page-main)
 
 ## My process
 
@@ -73,7 +73,7 @@ I haven't the exactly links I've use, but for th next challenges, this section w
 more complete.
 
 ## Author
-I don't have webpage yet, nor teitter or another social media. But her you can find my
+I don't have webpage yet, nor twitter or another social media. But her you can find my
 github and frontendmentor profiles:
 
 - Frontend Mentor - [@@Atlas6174](https://www.frontendmentor.io/profile/Atlas6174)
